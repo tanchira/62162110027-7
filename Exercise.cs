@@ -26,5 +26,14 @@ namespace _62162110027_7
         }
 
     }
+    class HighImpactAerobics : Sports   //class  แอโรบิค มีวิธีการ เต้นแอโรบิค
+    {
+
+        public void HowtoExercise()
+        {
+            Console.WriteLine("HowtoExercise : Basic dance exercises   ");
+        }
+
+    }
 
 }
