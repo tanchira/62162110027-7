@@ -35,5 +35,12 @@ namespace _62162110027_7
         }
 
     }
+    class RunningUpStairs : Sports  //class วิ่ง มีธิการ วิ่งขึ้นลงบันได
+    {
+        public void HowtoExercise()
+        {
+            Console.WriteLine("HowtoExercise : Run up and down stairs      ");
+        }
+    }
 
 }
