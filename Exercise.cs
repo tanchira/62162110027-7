@@ -61,20 +61,21 @@ namespace _62162110027_7
             Console.WriteLine("HowtoExercise & Calorie To lose weight \n");  //วิธีการออกกำลังกายและแคลอรี่เพื่อลดน้ำหนัก 
             Console.WriteLine("Which sport would you like to lose weight with ? "); //คุณต้องการลดน้ำหนักด้วยกีฬาชนิดใด
             Console.WriteLine("1 = HighImpactAerobics   2 =  RunningUpStairs   3 = JumpRope \n");  //กำหนดเลขเพื่อให้เลือก
-            Console.Write("Press the number to select a sport. : "); //
+            Console.Write("Press the number to select a sport. : "); //พิมพ์เลขเพื่อเลือกกีฬา
             int.TryParse(Console.ReadLine(), out int number);
 
-            Console.Write("How many hours of exercise do you need ? :");
+            Console.Write("How many hours of exercise do you need ? :"); // คุณต้องออกกำลังกายกี่ชั่วโมง
             int.TryParse(Console.ReadLine(), out int Hour);
 
-
+            //เมื่อเราเลือก หมายเลข  เเละบอก ชั่วโมงในการเล่นของเรา มันก็จะเเสดงผลวิธีการเล่นบอกเเคลในการเล่นต่อ 1 ชั่วโมง บอก แคลรอลี่ในชั่วโมงที่เราต้องการเล่น
+            
             switch (number)
             {
                 case 1:
-                    HighImpactAerobics Aerobics = new HighImpactAerobics();
+                    HighImpactAerobics Aerobics = new HighImpactAerobics();     
                     Aerobics.HowtoExercise();
                     Aerobics.Calorie = 533;
-                    Console.WriteLine(Aerobics.Calorie + " Calorie  / 1 Hour");
+                    Console.WriteLine(Aerobics.Calorie + " Calorie  / 1 Hour");  
                     Console.Write("You need  " + Hour + " Hour = ");
                     Aerobics.Calculat(Hour);
                     Console.Write(" Calorie ");
