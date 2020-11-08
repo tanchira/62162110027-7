@@ -42,5 +42,12 @@ namespace _62162110027_7
             Console.WriteLine("HowtoExercise : Run up and down stairs      ");
         }
     }
+    class JumpRope : Sports
+    {
+        public void HowtoExercise() // class กระโดด  มีวิธีการ กระโดดเชือก
+        {
+            Console.WriteLine("HowtoExercise : Rope skipping       ");
+        }
+    }
 
 }
