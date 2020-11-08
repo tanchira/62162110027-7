@@ -8,17 +8,17 @@ namespace _62162110027_7
 {
     internal abstract class Sports  //class กีฬาเก็บวิธีการออกกำลังกาย   แคลรอลี่ และ คำวนณไว้ 
     {
-        public void HowtoExercise()
+        public void HowtoExercise()  //มีวิธีการออกกำลังกาย
         {
 
         }
         private int calorie;
-        public int Calorie
+        public int Calorie  // มีแคลรอลี่
         {
             get { return calorie; }
             set { calorie = value; }
         }
-        public void Calculat(int Hours)
+        public void Calculat(int Hours)  // คิดชั่วโมงในการเล่นกีฬา ไว้ คำนวณแคลในการเล่นต่อชั่วโมง
         {
             int count;
             count = Hours * Calorie;
@@ -26,12 +26,14 @@ namespace _62162110027_7
         }
 
     }
-    class HighImpactAerobics : Sports   //class  แอโรบิค มีวิธีการ เต้นแอโรบิค
+
+    //แต่ละ class วิธีออกกำลังกาย แต่ละวิธีการจะมีการออกกำลังกายคนละแบบกัน
+    class HighImpactAerobics : Sports   //class  แอโรบิค มีวิธีการที่ เต้นแอโรบิค
     {
 
-        public void HowtoExercise()
+        public void HowtoExercise()   
         {
-            Console.WriteLine("HowtoExercise : Basic dance exercises   ");
+            Console.WriteLine("HowtoExercise : Basic dance exercises   ");  
         }
 
     }
@@ -49,16 +51,17 @@ namespace _62162110027_7
             Console.WriteLine("HowtoExercise : Rope skipping       ");
         }
     }
-    class PlaySelect
-    {
 
+    //class PlaySelect เพื่อเอาไว้เลือกเมื่อเราอยากออกกำลังกายแบบไหน
+    class PlaySelect  
+    {
 
         public void Select()
         {
-            Console.WriteLine("HowtoExercise & Calorie To lose weight \n");
-            Console.WriteLine("Which sport would you like to lose weight with ? ");
-            Console.WriteLine("1 = HighImpactAerobics   2 =  RunningUpStairs   3 = JumpRope \n");
-            Console.Write("Choose a number of sports : ");
+            Console.WriteLine("HowtoExercise & Calorie To lose weight \n");  //วิธีการออกกำลังกายและแคลอรี่เพื่อลดน้ำหนัก 
+            Console.WriteLine("Which sport would you like to lose weight with ? "); //คุณต้องการลดน้ำหนักด้วยกีฬาชนิดใด
+            Console.WriteLine("1 = HighImpactAerobics   2 =  RunningUpStairs   3 = JumpRope \n");  //กำหนดเลขเพื่อให้เลือก
+            Console.Write("Press the number to select a sport. : "); //
             int.TryParse(Console.ReadLine(), out int number);
 
             Console.Write("How many hours of exercise do you need ? :");
