@@ -49,5 +49,61 @@ namespace _62162110027_7
             Console.WriteLine("HowtoExercise : Rope skipping       ");
         }
     }
+    class PlaySelect
+    {
+
+
+        public void Select()
+        {
+            Console.WriteLine("HowtoExercise & Calorie To lose weight \n");
+            Console.WriteLine("Which sport would you like to lose weight with ? ");
+            Console.WriteLine("1 = HighImpactAerobics   2 =  RunningUpStairs   3 = JumpRope \n");
+            Console.Write("Choose a number of sports : ");
+            int.TryParse(Console.ReadLine(), out int number);
+
+            Console.Write("How many hours of exercise do you need ? :");
+            int.TryParse(Console.ReadLine(), out int Hour);
+
+
+            switch (number)
+            {
+                case 1:
+                    HighImpactAerobics Aerobics = new HighImpactAerobics();
+                    Aerobics.HowtoExercise();
+                    Aerobics.Calorie = 533;
+                    Console.WriteLine(Aerobics.Calorie + " Calorie  / 1 Hour");
+                    Console.Write("You need  " + Hour + " Hour = ");
+                    Aerobics.Calculat(Hour);
+                    Console.Write(" Calorie ");
+                    break;
+                case 2:
+                    RunningUpStairs Run = new RunningUpStairs();
+                    Run.HowtoExercise();
+                    Run.Calorie = 657;
+                    Console.WriteLine(Run.Calorie + " Calorie  / 1 Hour");
+                    Console.Write("You need  " + Hour + " Hour = ");
+                    Run.Calculat(Hour);
+                    Console.Write(" Calorie ");
+                    break;
+                case 3:
+                    JumpRope Jump = new JumpRope();
+                    Jump.HowtoExercise();
+                    Jump.Calorie = 861;
+                    Console.WriteLine(Jump.Calorie + " Calorie  / 1 Hour");
+                    Console.Write("You need  " + Hour + " Hour = ");
+                    Jump.Calculat(Hour);
+                    Console.Write(" Calorie ");
+
+                    break;
+                default:
+                    Console.WriteLine("Fall");
+                    break;
+
+
+            }
+
+        }
+
+    }
 
 }
